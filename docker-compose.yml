@@ -1,0 +1,15 @@
+services:
+  web_ui:
+    build: .
+    # ports:
+      # - 3000:3000
+    container_name: web_ui
+    restart: always
+  web_server:
+    image: nginx:latest
+    ports:
+      - 80
+      - 443
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/nginx.conf:ro
+    
