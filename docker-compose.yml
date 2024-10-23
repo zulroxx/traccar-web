@@ -5,6 +5,8 @@ services:
       # - 3000:3000
     container_name: web_ui
     restart: always
+    env_file:
+      - .env
   web_server:
     image: nginx:latest
     ports:
