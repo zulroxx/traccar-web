@@ -51,7 +51,7 @@ const ServerPage = () => {
   const handleFiles = useCatch(async (files) => {
     if (files.length > 0) {
       const file = files[0];
-      const response = await fetch(`http://localhost:8082/api/server/file/${file.path}`, {
+      const response = await fetch(`/api/server/file/${file.path}`, {
         method: 'POST',
         body: file,
       });
@@ -62,7 +62,7 @@ const ServerPage = () => {
   });
 
   const handleSave = useCatch(async () => {
-    const response = await fetch('http://localhost:8082/api/server', {
+    const response = await fetch('/api/server', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(item),
@@ -174,7 +174,7 @@ const ServerPage = () => {
                 <SelectField
                   value={item.attributes.timezone}
                   onChange={(e) => setItem({ ...item, attributes: { ...item.attributes, timezone: e.target.value } })}
-                  endpoint="http://localhost:8082/api/server/timezones"
+                  endpoint="/api/server/timezones"
                   keyGetter={(it) => it}
                   titleGetter={(it) => it}
                   label={t('sharedTimezone')}

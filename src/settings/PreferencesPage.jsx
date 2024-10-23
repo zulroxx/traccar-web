@@ -88,7 +88,7 @@ const PreferencesPage = () => {
   });
 
   const handleReboot = useCatch(async () => {
-    const response = await fetch('http://localhost:8082/api/server/reboot', { method: 'POST' });
+    const response = await fetch('/api/server/reboot', { method: 'POST' });
     throw Error(response.statusText);
   });
 

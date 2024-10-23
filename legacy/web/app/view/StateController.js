@@ -196,7 +196,7 @@ Ext.define('Traccar.view.StateController', {
             Ext.Ajax.request({
                 scope: this,
                 method: 'GET',
-                url: 'http://localhost:8082/api/server/geocode',
+                url: '/api/server/geocode',
                 params: {
                     latitude: this.position.get('latitude'),
                     longitude: this.position.get('longitude')

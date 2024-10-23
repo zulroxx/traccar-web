@@ -259,7 +259,7 @@ const UserPage = () => {
               <SelectField
                 value={item.attributes && item.attributes.timezone}
                 onChange={(e) => setItem({ ...item, attributes: { ...item.attributes, timezone: e.target.value } })}
-                endpoint="http://localhost:8082/api/server/timezones"
+                endpoint="/api/server/timezones"
                 keyGetter={(it) => it}
                 titleGetter={(it) => it}
                 label={t('sharedTimezone')}

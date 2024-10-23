@@ -206,11 +206,11 @@
 
     React.useEffect(() => {
       const fetchData = async () => {
-        const serverResponse = await fetch('http://localhost:8082/api/server');
+        const serverResponse = await fetch('/api/server');
         if (serverResponse.ok) {
           setServer(await serverResponse.json());
         }
-        const sessionResponse = await fetch('http://localhost:8082/api/session');
+        const sessionResponse = await fetch('/api/session');
         if (sessionResponse.ok) {
           setUser(await sessionResponse.json());
         }
