@@ -61,7 +61,7 @@ Ext.define('Traccar.controller.Root', {
     onLaunch: function () {
         Ext.Ajax.request({
             scope: this,
-            url: 'api/server',
+            url: 'http://localhost:8082/api/server',
             callback: this.onServerReturn
         });
     },

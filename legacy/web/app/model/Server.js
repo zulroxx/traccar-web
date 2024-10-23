@@ -76,7 +76,7 @@ Ext.define('Traccar.model.Server', {
 
     proxy: {
         type: 'ajax',
-        url: 'api/server',
+        url: 'http://localhost:8082/api/server',
         actionMethods: {
             update: 'PUT'
         },
