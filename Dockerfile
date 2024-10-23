@@ -26,4 +26,4 @@ EXPOSE 3000
 # Serve the app using the `serve` package
 # CMD ["serve", "-s", "build", "-l", "3000"]
 
-CMD ["yarn", "start"]
+CMD ["yarn", "start" "--host", "0.0.0.0"]
